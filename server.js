@@ -28,7 +28,7 @@ app.set('views','./views');
 
 app.use('/',require('./routes/index'));
 // express listening to the port and returning
-app.listen(port,function(err){
+app.listen(process.env.PORT||port,function(err){
     if(err){
         console.log("Error In Running The Server");
         return;
